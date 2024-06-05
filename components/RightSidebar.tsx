@@ -17,8 +17,8 @@ const RightSidebar = () => {
   const router = useRouter();
   const {user}=useUser();
   const topPodcasters=useQuery(api.users.getTopUserByPodcastCount);
-  if(!topPodcasters) return <LoaderSpinner/>
   const {audio} = useAudio();
+  if(!topPodcasters) return <LoaderSpinner/>
   return (
     <section className={cn('right_sidebar h-[calc(100vh-5px)] ',{'h-[calc(100ch-140px)]':audio?.audioUrl})}>
         <SignedIn>

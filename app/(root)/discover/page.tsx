@@ -24,7 +24,7 @@ const Discover = ({searchParams:{search}}:{searchParams:{search:string}}) => {
           {podcastsData.length>0?(
               <div className='podcast_grid'>
                 {podcastsData?.map(({_id,podcastTitle,podcastDescription,imageUrl})=>(
-                <PodcastCard key={_id} imgURL={imageUrl!} title={podcastTitle} description={podcastDescription} podcastId={_id}  />
+                <PodcastCard key={_id} imgUrl={imageUrl!} title={podcastTitle} description={podcastDescription} podcastId={_id}  />
               ))}
             </div>
           ):<EmptyState title='No result found'/>}
